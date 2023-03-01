@@ -13,3 +13,20 @@
 
 
 /* #endregion DEBUG */
+
+
+/* #region COMMON */
+
+/* #endregion COMMON */
+
+/* #region HEADER */
+
+#app_header {
+    height: 80px;
+}
+
+#app_header .container-fluid {
+    justify-content: unset;
+}
+
+/* #endregion HEADER */
