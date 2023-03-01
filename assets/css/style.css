@@ -39,4 +39,8 @@
     background-color: var(--db-sidebar-dark);
 }
 
+.side_top {
+    height: calc(100% - 35px);
+}
+
 /* #endregion SIDEBAR */
