@@ -18,6 +18,12 @@
 
 /* #endregion COMMON */
 
+/* #region UTILITIES */
+
+
+
+/* #endregion UTILITIES */
+
 /* #region HEADER */
 
 #app_header {
@@ -31,12 +37,10 @@
 /* #endregion HEADER */
 
 /* #region SIDEBAR */
-#main {
-    height: calc(100vh - 75px);
-}
 
 .sidebar {
     width: 10%;
+    height: calc(100vh - 75px);
     background-image: url('/assets/img/sidebar-bg.png') ;
     background-color: var(--db-sidebar-dark);
 }
@@ -48,5 +52,7 @@
 /* #endregion SIDEBAR */
 
 /* #region MAIN */
+
+
 
 /* #endregion MAIN */
