@@ -34,7 +34,7 @@
                   <span class="input-group-text bg-white"
                      id="addon-wrapping"><i class="fa-solid
                         fa-magnifying-glass"></i></span>
-                     <input type="text" class="form-control border-start-0"
+                  <input type="text" class="form-control border-start-0"
                      placeholder="Prova a cercare: Boolean"
                      aria-label="Username"
                      aria-describedby="addon-wrapping">
@@ -126,9 +126,92 @@
                      <div class="banner_element d-flex gap-2 align-items-center
                         order-md-last">
                         <span class="">Nuovo Studente</span>
-                        <button class="btn rounded-1 border-white"><i class="fa
-                              fa-plus
-                              text-white" aria-hidden="true"></i></button>
+                        <button class="btn rounded-1 border-white"
+                           data-bs-toggle="offcanvas"
+                           data-bs-target="#offcanvasRight"
+                           aria-controls="offcanvasRight"><i class="fa
+                           fa-plus
+                           text-white" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="offcanvas border-0 offcanvas-end text-black " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                           <div class="offcanvas-header">
+                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                           </div>
+                           <div class="offcanvas-body">
+                              <form class="row g-3">
+                                 <div class="col-md-6">
+                                   <label for="inputName1" class="form-label">Nome</label>
+                                   <input type="text" class="form-control" id="inputName1" required/>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <label for="inputSurname1" class="form-label">Cognome</label>
+                                   <input type="text" class="form-control" id="inputSurname1" required/>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <label for="inputEmail1" class="form-label">E-Mail</label>
+                                   <div class="input-group mb-3">
+                                     <span class="input-group-text" id="basic-addon1">@</span>
+                                     <input type="email" class="form-control" id="inputEmail1" aria-describedby="basic-addon1" required/>
+                                   </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <label for="inputPassword1" class="form-label">Password</label>
+                                   <input type="password" class="form-control" id="inputPassword1" required/>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <label for="inputEmail2" class="form-label">E-Mail</label>
+                                   <div class="input-group mb-3">
+                                     <span class="input-group-text" id="basic-addon1">@</span>
+                                     <input type="email" class="form-control" id="inputEmail2" aria-describedby="basic-addon2" required/>
+                                   </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <label for="inputPassword2" class="form-label">Password</label>
+                                   <input type="password" class="form-control" id="inputPassword2" required/>
+                                 </div>
+                                 <div class="col-12">
+                                 <label for="inputCity" class="form-label">Indirizzo</label>
+                                 <input type="text" class="form-control" id="inputAddress" required/>
+                                 </div>
+                                 <div class="col-md-6">
+                                   <label for="inputAddress" class="form-label">Città</label>
+                                   <input type="text" class="form-control" id="inputCity" required/>
+                                 </div>
+                                 <div class="col-md-4">
+                                   <label for="inputState" class="form-label">Stato</label>
+                                   <select id="inputState" class="form-select" required>
+                                     <option selected="">Scegli</option>
+                                     <option>Italy</option>
+                                     <option>Italy</option>
+                                     <option>Italy</option>
+                                   </select>
+                                 </div>
+                                 <div class="col-md-2">
+                                   <label for="inputZip" class="form-label">CAP</label>
+                                   <input type="text" class="form-control" id="inputZip" required/>
+                                 </div>
+                                 <div class="col-12">
+                                 <div class="input-group mb-3">
+                                 <input type="file" class="form-control" id="inputGroupFile">
+                               </div>
+                                 </div>
+                                 <div class="col-12">
+                                   <div class="form-check">
+                                     <input class="form-check-input" type="checkbox" id="gridCheck" required/>
+                                     <label class="form-check-label" for="gridCheck">Seleziona per proseguire</label>
+                                   </div>
+                                 </div>
+                                 <div class="col-12">
+                                   <button type="submit" class="btn btn-primary">Sign in</button>
+                                   <button type="reset" class="btn btn-warning">Svuota</button>
+                                 </div>
+                               </form>
+                           </div>
+                         </div>
+
+                        
                      </div>
                      <div class="banner_badges d-flex flex-column">
                         <div class="banner_element d-flex align-items-center">
@@ -410,38 +493,72 @@
                               </h4>
                            </div>
                            <div class="card-body">
-                              <div class="accordion accordion-flush" id="accordionFlushExample">
+                              <div class="accordion accordion-flush"
+                                 id="accordionFlushExample">
                                  <div class="accordion-item">
-                                   <h2 class="accordion-header" id="flush-headingOne">
-                                     <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                       Come aggiungere un nuovo studente?
-                                     </button>
-                                   </h2>
-                                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                     <div class="accordion-body">Clicca + sulla sezione in alto (Nuovo Studente) </div>
-                                   </div>
+                                    <h2 class="accordion-header"
+                                       id="flush-headingOne">
+                                       <button class="accordion-button collapsed
+                                          fw-semibold" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#flush-collapseOne"
+                                          aria-expanded="false"
+                                          aria-controls="flush-collapseOne">
+                                          Come aggiungere un nuovo studente?
+                                       </button>
+                                    </h2>
+                                    <div id="flush-collapseOne"
+                                       class="accordion-collapse collapse"
+                                       aria-labelledby="flush-headingOne"
+                                       data-bs-parent="#accordionFlushExample">
+                                       <div class="accordion-body">Clicca +
+                                          sulla sezione in alto (Nuovo Studente)
+                                       </div>
+                                    </div>
                                  </div>
                                  <div class="accordion-item">
-                                   <h2 class="accordion-header" id="flush-headingTwo">
-                                     <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                       Dove posso trovare i miei messaggi?
-                                     </button>
-                                   </h2>
-                                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                     <div class="accordion-body">Clicca sulla campanellina in alto a destra</div>
-                                   </div>
+                                    <h2 class="accordion-header"
+                                       id="flush-headingTwo">
+                                       <button class="accordion-button collapsed
+                                          fw-semibold" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#flush-collapseTwo"
+                                          aria-expanded="false"
+                                          aria-controls="flush-collapseTwo">
+                                          Dove posso trovare i miei messaggi?
+                                       </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo"
+                                       class="accordion-collapse collapse"
+                                       aria-labelledby="flush-headingTwo"
+                                       data-bs-parent="#accordionFlushExample">
+                                       <div class="accordion-body">Clicca sulla
+                                          campanellina in alto a destra</div>
+                                    </div>
                                  </div>
                                  <div class="accordion-item">
-                                   <h2 class="accordion-header" id="flush-headingThree">
-                                     <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                       Posso usare questa dashboard da mobile?
-                                     </button>
-                                   </h2>
-                                   <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                     <div class="accordion-body">Questa dashboard è responsive al 100%, la risposta è si!</div>
-                                   </div>
+                                    <h2 class="accordion-header"
+                                       id="flush-headingThree">
+                                       <button class="accordion-button collapsed
+                                          fw-semibold" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#flush-collapseThree"
+                                          aria-expanded="false"
+                                          aria-controls="flush-collapseThree">
+                                          Posso usare questa dashboard da
+                                          mobile?
+                                       </button>
+                                    </h2>
+                                    <div id="flush-collapseThree"
+                                       class="accordion-collapse collapse"
+                                       aria-labelledby="flush-headingThree"
+                                       data-bs-parent="#accordionFlushExample">
+                                       <div class="accordion-body">Questa
+                                          dashboard è responsive al 100%, la
+                                          risposta è si!</div>
+                                    </div>
                                  </div>
-                               </div>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -453,21 +570,31 @@
                               </h4>
                            </div>
                            <div class="card-body">
-                              <div class="border border-secondary border-opacity-25 p-2 rounded-top">
-                                 <input class="form-check-input me-1" type="checkbox" value="">
-                                 <label class="form-check-label" for="flexCheckDefault">
+                              <div class="border border-secondary
+                                 border-opacity-25 p-2 rounded-top">
+                                 <input class="form-check-input me-1"
+                                    type="checkbox" value="">
+                                 <label class="form-check-label"
+                                    for="flexCheckDefault">
                                     Kickoff nuove classi
                                  </label>
                               </div>
-                              <div class="border border-secondary border-opacity-25 p-2 border-top-0 border-bottom-0">
-                                 <input class="form-check-input me-1" type="checkbox" value="">
-                                 <label class="form-check-label" for="flexCheckDefault">
+                              <div class="border border-secondary
+                                 border-opacity-25 p-2 border-top-0
+                                 border-bottom-0">
+                                 <input class="form-check-input me-1"
+                                    type="checkbox" value="">
+                                 <label class="form-check-label"
+                                    for="flexCheckDefault">
                                     Kickoff nuove classi
                                  </label>
                               </div>
-                              <div class="border border-secondary border-opacity-25 p-2 rounded-bottom">
-                                 <input class="form-check-input me-1" type="checkbox" value="">
-                                 <label class="form-check-label" for="flexCheckDefault">
+                              <div class="border border-secondary
+                                 border-opacity-25 p-2 rounded-bottom">
+                                 <input class="form-check-input me-1"
+                                    type="checkbox" value="">
+                                 <label class="form-check-label"
+                                    for="flexCheckDefault">
                                     Kickoff nuove classi
                                  </label>
                               </div>
@@ -476,12 +603,13 @@
 
                         <div class="card mb-3 p-3">
                            <div class="card card_stats">
-                              <img src="./assets/img/stats.jpeg" alt="" class="img-fluid mb-2">
+                              <img src="./assets/img/stats.jpeg" alt=""
+                                 class="img-fluid mb-2">
                               <strong>
                                  Utenti attivi
                               </strong>
-                              <p class="fw-light border-bottom mb-0">Lista degli utenti attivi in piattaforma negli ultimi mesi</p>
-
+                              <p class="fw-light border-bottom mb-0">Lista degli
+                                 utenti attivi in piattaforma negli ultimi mesi</p>
                               <span class="fw-semibold border-bottom">
                                  Gennaio: 1200
                               </span>

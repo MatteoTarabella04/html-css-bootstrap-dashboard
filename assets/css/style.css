@@ -70,4 +70,21 @@
     padding: 0.3rem 0.5rem;
 }
 
+.offcanvas {
+    width: 100% !important;
+}
+
+
 /* #endregion MAIN */
+
+/* #region RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+
+    .offcanvas {
+        width: 50% !important;
+    }    
+    
+}
+
+/* #endregion RESPONSIVE */
