@@ -56,6 +56,11 @@
     height: calc(100vh - 75px);
 }
 
+.side_top {
+    width: 100%;
+    text-align: center;
+}
+
 .bottom_main {
     overflow-y: auto;
 }
@@ -73,6 +78,12 @@
 .offcanvas {
     width: 100% !important;
     transition: 1s;
+}
+
+/* animations */
+
+.side_top li:hover {
+    background-color: gray;
 }
 
 
