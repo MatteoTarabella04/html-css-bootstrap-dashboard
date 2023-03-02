@@ -56,4 +56,8 @@
     height: calc(100vh - 75px);
 }
 
+.bottom_main {
+    overflow-y: auto;
+}
+
 /* #endregion MAIN */
