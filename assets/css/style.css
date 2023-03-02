@@ -60,4 +60,14 @@
     overflow-y: auto;
 }
 
+.card_stats {
+    font-size: 1rem;
+}
+
+.card_stats span,
+.card_stats p,
+.card_stats strong {
+    padding: 0.3rem 0.5rem;
+}
+
 /* #endregion MAIN */
