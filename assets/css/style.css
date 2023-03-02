@@ -40,7 +40,6 @@
 
 .sidebar {
     width: 10%;
-    height: calc(100vh - 75px);
     background-image: url('/assets/img/sidebar-bg.png') ;
     background-color: var(--db-sidebar-dark);
 }
@@ -53,6 +52,8 @@
 
 /* #region MAIN */
 
-
+#main {
+    height: calc(100vh - 75px);
+}
 
 /* #endregion MAIN */
